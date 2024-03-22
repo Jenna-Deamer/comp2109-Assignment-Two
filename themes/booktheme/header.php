@@ -21,7 +21,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-
+                <?php
+                wp_nav_menu(array(
+                    'menu' => 'Main Navigation',
+                    'theme_location' => 'header',
+                    'depth' => 1,
+                    'fallback_cb' => false,
+                    'menu_class' => 'navbar-nav'
+                ));
+                ?>
             </div>
         </div>
     </nav>
