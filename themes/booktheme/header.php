@@ -12,7 +12,7 @@
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
+            <a class="navbar-brand logo" href="<?php echo esc_url(home_url()); ?>">
                 <img src="<?php echo esc_url(home_url('/wp-content/themes/booktheme/assets/logo.png')); ?>"
                      alt="header logo" class="logo-img">
             </a>

@@ -1,17 +1,79 @@
-
+:root {
+    --white: #fffdfd;
+    --black: #0c0303;
+    --grey: #BFBFBD;
+    --primary: #8C644D;
+    --secondary:#BFAC9B;
+    --action-colour: #c4512c;
+    --action-colour-hover: #cc4a20;
+}
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: var(--black);
+}
+/*font sizes*/
+body{
+    font-size: 18px;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    font-size: 28px;
 }
 
+main{
+    min-height: 100vh;
+}
+/*NAV*/
+nav {
+    background-color: var(--primary);
+    box-shadow: 0 3px 5px var(--black);
+}
 
-/*Home - Hero Section*/
+.navbar a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.2em;
+    text-align: center;
+    /* Space between links */
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+    /* Position for underline animation */
+    position: relative;
+}
+
+/* Underline slide in effect on hover */
+.navbar a:not(.logo)::after {
+    content: '';
+    position: absolute; /* Position  pseudo-element */
+    width: 0; /* Initial width for sliding animation */
+    height: 2px; /* Set height for underline */
+    background-color: var(--white);
+    /*Align underline at bottom of link*/
+    bottom: 0;
+    left: 0;
+    transition: width 0.2s ease-in-out;
+}
+
+.navbar a:hover:not(.logo)::after {
+    /* Expand  width on hover */
+    width: 100%;
+}
+
+/*HERO*/
 .hero-section{
     /*Image*/
-    height: 40vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+
 }
 .hero-content{
     /*center content*/
@@ -20,4 +82,96 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+.hero-content>h1{
+    margin-bottom: 1em;
+}
+/*HOME PAGE BUTTONS*/
+.home-button{
+    background-color: var(--action-colour);
+    color: var(--white);
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px var(--black);
+}
+.home-button:hover{
+    transition: .2s ease-in;
+    background-color: var(--action-colour-hover);
+}
+
+/*ABOUT SECTION*/
+.about-section{
+    min-height: 50vh;
+
+}
+.about-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: lightgrey;
+    border: solid 2px var(--black);
+    box-shadow: 0 3px 5px var(--black);
+
+}
+.about-content{
+    background-color: var(--secondary);
+    padding: 2em;
+    /*Center Content*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.about-content>h2{
+    margin-bottom: 1em;
+}
+.about-image > img{
+    border-left: solid 2px var(--black);
+    height: 100%;
+    width: 100%;
+}
+
+/*Stack columns*/
+@media only screen and (max-width: 950px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 2em;
+    }
+    .about-content{
+        font-size: 16px;
+    }
+    .about-content,
+    .about-image {
+        width: 100%;
+    }
+    .about-image > img {
+        border-top: solid var(--black) 2px;
+        object-fit: fill;
+        max-height: 300px;
+    }
+}
+
+/*FEATURED SECTION*/
+/*Product Cards*/
+
+/*Link to shop section*/
+.feature-section-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.feature-section-footer>h3{
+    margin-bottom: 1em;
+}
+
+/*FOOTER*/
+footer{
+    background-color: var(--primary);
+    display: flex;
+    padding: 1em 1em 0 1em;
 }
