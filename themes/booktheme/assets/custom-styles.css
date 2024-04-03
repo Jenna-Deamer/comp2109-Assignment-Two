@@ -286,11 +286,53 @@ nav {
 }
 
 /*SHOP PAGE*/
-.shop-body{
-    padding: 4em;
+.page-title{
+    text-align: center;
 }
-
-
+.shop-body{
+    padding: 6em;
+}
+/*product cards*/
+/*product img*/
+.woocommerce ul.products li.product a img{
+   border-radius: 8px;
+}
+/*Sale icon*/
+.woocommerce ul.products li.product .onsale{
+    background-color: var(--action-colour);
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+    color: var(--black);
+    text-decoration: underline;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title:hover{
+    transition: .2s ease-in-out;
+    color: var(--action-colour-hover);
+}
+.woocommerce ul.products li.product .button{
+    background-color: var(--action-colour);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-right: 12px;
+}
+.woocommerce ul.products li.product .button:hover{
+    transition: .2s ease-in;
+    background-color: var(--action-colour-hover);
+}
+.woocommerce ul.products li.product a{
+    color: var(--black);
+    text-decoration: underline;
+}
+.woocommerce ul.products li.product a:hover{
+    transition: .2s ease-in;
+    color: var(--action-colour-hover);
+}
 /*FOOTER*/
 footer{
     background-color: var(--primary);
