@@ -151,134 +151,58 @@ nav {
     }
 }
 
-/*FEATURED SECTION*/
+/* FEATURED SECTION */
 .feature-section {
-    padding: 2em;
+    background-color: var(--secondary);
 }
 
-/* Book Product Cards */
-.book-cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 4em;
+.feature-section-masthead {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 3em;
+    margin-bottom: 2em;
+    box-shadow: 0 3px 5px var(--black);
 }
 
-/* Grid Mobile layouts */
-@media (max-width: 1200px) {
-    .book-cards-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .book-cards-container .book-card:last-of-type {
-        grid-column: span 2;
-    }
+/* Product Cards */
+.featured-products {
+    padding-right: 4em;
+    padding-left: 4em;
 }
 
-@media (max-width: 980px) {
-    .book-cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .book-cards-container .book-card:last-of-type {
-        grid-column: span 1;
-    }
-}
-
-.book-card {
-    padding: 0;
-    border-radius: 10px;
-    background-color: lightgrey;
-}
-
-.card-heading {
-    text-align: center;
-    color: var(--black);
-}
-
-.card-heading:hover {
-    transition: .2s ease-in;
-    color: var(--action-colour);
-}
-
-.book-card-body {
-    padding: 16px;
-    /* Make body same height, forcing buttons to align with other cards */
-    min-height: 300px;
-}
-.book-image{
+.featured-products ul.products {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-.book-image > img{
-    height: 240px;
 }
 
-.book-card-description > a {
-    display: flex;
-    justify-content: flex-end;
+.woocommerce ul.products li.product {
+    height: 500px;
+    width: auto;
 }
 
-/* Tags & Category Styles */
-.tags-wrapper {
-    margin-bottom: 10px;
+/* Media Query for stacking products at 980px and lower */
+@media screen and (max-width: 980px) {
+    .featured-products ul.products {
+        flex-direction: column; /* Stack the products vertically */
+        align-items: center; /* Center align the stacked products */
+    }
+
+    .woocommerce ul.products li.product {
+        height: auto; /* Reset height */
+        width: auto; /* Reset width */
+        margin-bottom: 2em; /* Add some space between stacked products */
+    }
 }
 
-.tag-box,
-.category-box {
-    background-color: #f2f2f2;
-    color: var(--black);
-    text-decoration: none;
-    padding: 4px 8px 4px 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
 
-.tag-box:hover,
-.category-box:hover {
-    transition: .2s ease-in;
-    color: var(--action-colour-hover);
-}
-
-/* Card Footer - Price info & add to cart button */
-.book-card-footer {
-    border-top: solid 1px var(--black);
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-}
-
-/* Buttons */
-.book-card-button {
-    background-color: var(--action-colour);
-    color: var(--white);
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.book-card-button:hover {
-    transition: .2s ease-in;
-    background-color: var(--action-colour-hover);
-}
-
-.book-card-button:active {
-    transform: translateY(2px); /* Shifts button on click, for visual feedback */
-}
 /*Featured Section Shop Link*/
 .feature-section-footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding-bottom: 2em;
 }
 .feature-section-footer>a{
     margin-top: 1em;
@@ -309,6 +233,7 @@ nav {
     transition: .2s ease-in-out;
     color: var(--action-colour-hover);
 }
+/*Button Styles*/
 .woocommerce ul.products li.product .button{
     background-color: var(--action-colour);
     color: var(--white);
@@ -321,16 +246,15 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     margin-right: 12px;
 }
-.woocommerce ul.products li.product .button:hover{
+.woocommerce ul.products li.product > .button:hover{
     transition: .2s ease-in;
     background-color: var(--action-colour-hover);
 }
-.woocommerce ul.products li.product a{
+.woocommerce a.added_to_cart{
     color: var(--black);
-    text-decoration: underline;
 }
-.woocommerce ul.products li.product a:hover{
-    transition: .2s ease-in;
+.woocommerce a.added_to_cart:hover {
+    transition: .2s ease-in-out;
     color: var(--action-colour-hover);
 }
 /*FOOTER*/

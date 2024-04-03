@@ -36,10 +36,18 @@ get_header();
 
 
     <section class="feature-section">
-         <h2 class="text-center pb-4"><?php echo esc_html(get_field('featured_section_header')); ?></h2>
-        <div class="book-cards-container">
-            <?php echo do_shortcode('[book_cards]'); ?>
+        <div class="feature-section-masthead">
+            <h2 class="text-center"><?php echo esc_html(get_field('featured_section_header')); ?></h2>
         </div>
+
+    <div class="featured-products">
+        <?php
+        // Display WooCommerce products
+        echo do_shortcode('[products limit="3"]');
+        ?>
+
+    </div>
+
         <div class="feature-section-footer">
             <h3><?php echo esc_html(get_field('featured_section_sub_header')); ?></h3>
             <a class="home-button" <?php echo esc_url(get_permalink(get_option('woocommerce_shop_page_id'))); ?>"><?php echo esc_html(get_field('featured_section_button_text')); ?></a>

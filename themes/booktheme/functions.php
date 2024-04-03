@@ -14,6 +14,7 @@ add_theme_support( 'post-thumbnails' );
 //footer setup
 
 //product-cards shortcode
+/*
 function bookCards_shortcode() {
     $products_per_page = is_front_page() ? 3 : 8; // Limit to 3 on the homepage, otherwise default to 8
     $args = array(
@@ -83,8 +84,11 @@ function bookCards_shortcode() {
         echo 'No products found';
     }
 }
+*/
+
 //add book_card shortcode functionality
-add_shortcode( 'book_cards', 'bookCards_shortcode' );
+//add_shortcode( 'book_cards', 'bookCards_shortcode' );
+
 
 
 // adding woocommerce support to theme
