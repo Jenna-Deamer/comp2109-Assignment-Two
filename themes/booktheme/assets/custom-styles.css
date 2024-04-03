@@ -284,6 +284,13 @@ nav {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+/*SHOP PAGE*/
+.shop-body{
+    padding: 4em;
+}
+
+
 /*FOOTER*/
 footer{
     background-color: var(--primary);
