@@ -1,7 +1,7 @@
 :root {
     --white: #fffdfd;
     --black: #0c0303;
-    --grey: #BFBFBD;
+    --grey: rgba(218, 213, 213, 0.6);
     --primary: #8C644D;
     --secondary:#BFAC9B;
     --action-colour: #c4512c;
@@ -64,7 +64,10 @@ nav {
     /* Expand  width on hover */
     width: 100%;
 }
-
+/*WOOCOMMERCE CONTAINER*/
+.woocommerce-body{
+    background-color: var(--secondary);
+}
 /*HERO*/
 .hero-section{
     /*Image*/
@@ -176,10 +179,11 @@ nav {
     align-items: center;
 }
 
-.woocommerce ul.products li.product {
+.featured-products .woocommerce ul.products li.product {
     height: 500px;
     width: auto;
 }
+
 
 /* Media Query for stacking products at 980px and lower */
 @media screen and (max-width: 980px) {

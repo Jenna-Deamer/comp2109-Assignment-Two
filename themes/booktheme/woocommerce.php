@@ -7,7 +7,7 @@
     </head>
     <body   <?php body_class(); ?>>
 
-        <main class="woocommerce">
+        <main class="woocommerce woocommerce-body">
 
             <section class="shop-body">
                 <?php

@@ -112,11 +112,6 @@ add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
     remove_action('woocommerce_single_product_summary','woocommerce_template_single_add_to_cart',30);
     remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta',40);
 
-    remove_action('woocommerce_after_single_product_summary','woocommerce_output_product_data_tabs',10);
-    remove_action('woocommerce_after_single_product_summary','woocommerce_upsell_display',15);
-    remove_action('woocommerce_after_single_product_summary','woocommerce_output_related_products',20);
-
-
     remove_action('woocommerce_product_additional_information','wc_display_product_attributes',10);
 
     remove_action('woocommerce_single_variation','woocommerce_single_variation',10);
@@ -126,11 +121,6 @@ add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
     add_action('woocommerce_single_product_summary','woocommerce_template_single_title',10);
     add_action('woocommerce_single_product_summary','woocommerce_template_single_price',15);
     add_action('woocommerce_single_product_summary','woocommerce_template_single_add_to_cart',15);
-
-    add_action('woocommerce_single_product_summary','woocommerce_template_single_meta',15);
-    add_action('woocommerce_after_single_product_summary','woocommerce_output_related_products',10);
-    add_action('woocommerce_after_single_product_summary','woocommerce_output_product_data_tabs',15);
-    add_action('woocommerce_product_additional_information','wc_display_product_attributes',15);
 
     //change shop title on shop page
     add_filter('woocommerce_page_title', 'custom_shop_page_title');
