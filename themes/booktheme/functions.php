@@ -125,6 +125,15 @@ add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
     //change shop title on shop page
     add_filter('woocommerce_page_title', 'custom_shop_page_title');
 
+    // Remove additional information tab on product page
+    add_filter( 'woocommerce_product_tabs', 'remove_product_additional_information_tab', 99 );
+
+    function remove_product_additional_information_tab( $tabs ) {
+        unset( $tabs['additional_information'] ); // Remove the additional information tab
+        return $tabs;
+    }
+
+
 function custom_shop_page_title($title) {
     // Change the default title "Shop"
     $new_title = 'Explore Our Courses';
