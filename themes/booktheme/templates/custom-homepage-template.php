@@ -50,7 +50,10 @@ get_header();
 
         <div class="feature-section-footer">
             <h3><?php echo esc_html(get_field('featured_section_sub_header')); ?></h3>
-            <a class="home-button" <?php echo esc_url(get_permalink(get_option('woocommerce_shop_page_id'))); ?>"><?php echo esc_html(get_field('featured_section_button_text')); ?></a>
+            <a class="home-button" href="<?php echo esc_url(get_permalink(woocommerce_get_page_id('shop'))); ?>">
+                <?php echo esc_html(get_field('featured_section_button_text')); ?>
+            </a>
+
         </div>
 
     </section>

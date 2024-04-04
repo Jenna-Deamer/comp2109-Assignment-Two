@@ -136,7 +136,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
 
 function custom_shop_page_title($title) {
     // Change the default title "Shop"
-    $new_title = 'Explore Our Courses';
+    $new_title = 'Explore Our Selection';
     return $new_title;
 }
 
