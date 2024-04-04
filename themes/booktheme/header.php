@@ -14,7 +14,7 @@
         <div class="container">
             <a class="navbar-brand logo" href="<?php echo esc_url(home_url()); ?>">
                 <img src="<?php echo esc_url(home_url('/wp-content/themes/booktheme/assets/logo.png')); ?>"
-                     alt="header logo" class="logo-img">
+                     alt="header logo" class="logo-img" width="80" height="80">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
